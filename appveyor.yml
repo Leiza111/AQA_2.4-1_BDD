@@ -4,7 +4,7 @@ stack: jdk 11
 
 branches:
   only:
-    - master
+    - master  # ветка git
 
 build: off
 
@@ -12,6 +12,6 @@ install:
 
   - java -jar ./artifacts/app-ibank-build-for-testers.jar &
 
-test_script:
+build_script:
   - chmod +x gradlew
-  - ./gradlew test -Dselenide.headless=true --info
+  - ./gradlew test --info -Dselenide.headless=true
