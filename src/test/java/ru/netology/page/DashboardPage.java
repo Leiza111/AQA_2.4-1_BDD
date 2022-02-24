@@ -43,19 +43,7 @@ public class DashboardPage {
         val finish = text.indexOf(balanceFinish);
         val value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
-    }
-
-    public int getSecondCardBalance() {
-        val text = cardSecond.text();
-        return extractBalanceCard2(text);
-    }
-
-    private int extractBalanceCard2(String text) {
-        val start = text.indexOf(balanceStart);
-        val finish = text.indexOf(balanceFinish);
-        val value = text.substring(start + balanceStart.length(), finish);
-        return Integer.parseInt(value);
-    }
+   }
 }
 
 
